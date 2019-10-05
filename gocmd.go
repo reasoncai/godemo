@@ -7,7 +7,7 @@ import (
 
 func main() {
 	cmd := exec.Command("/Users/reason/PycharmProjects/common-tool/bin/ffmpeg", "-version")
-	buf, err := cmd.Output()
+	buf, err := cmd.CombinedOutput()
 	if err != nil {
 		fmt.Println(err.Error())
 	}
